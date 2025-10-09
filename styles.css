@@ -1,0 +1,334 @@
+/* VARIABLES GLOBALES DEL SITIO  */
+:root{
+    --primary-color: #2d35a5;
+    --secondary-color: #f5f5f5;
+    --accent-color: #7b79e6;
+    --font-color: #333333;
+    --color-nav: #42db9b;
+    --option-color: #30ec88;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* Permite que el contenido empuje el footer al fondo */
+main {
+    flex-grow: 1; 
+}
+
+
+/* Estructura base del documento */
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO  */
+header{
+    color: var(--secondary-color); 
+    text-align: center;
+    padding: 50px 20px;
+    background-image:  url('./img/solmax-logo.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--primary-color);
+    min-height: 100px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+header h1, header p {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVEGACIÓN PRINCIPAL */
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: var(--color-nav);
+    font-size: 1.3rem;
+    flex-direction: row ;
+    align-items: center;
+}
+
+nav a{
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 10px 18px;
+    display: block;
+}
+
+nav a:hover{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+/* SECCIÓN INICIO (BIENVENIDA)*/
+#inicio{
+    background-image:  url('./img/bienvenida.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    min-height: 400px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 30px; 
+    margin-top: 10px;
+}
+
+/* SECCIÓN SERVICIOS  */
+
+#servicios{
+    padding: 20px 20px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+#servicios h2{
+    font-size: 1.7rem;
+    margin-bottom: auto;
+}
+
+#servicios button{
+    margin-top: 0; 
+    margin-bottom: 10px;
+    padding: 10px 10px; 
+    font-size: 1.15rem; 
+    font-weight: 500; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: inline-block;
+    background-color: var(--option-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    align-self: auto;
+    position: relative; 
+    left: 20px;
+}
+
+#servicios button:hover {
+    background-color: var(--accent-color); 
+    color: var(--secondary-color); 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+/* SECCIÓN PRODUCTOS  */
+
+#productos{
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#productos h2{
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color)
+}
+
+/* GRID DE PRODUCTOS */
+
+.productos-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.productos-list div{
+    background-color: var(--option-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    color:#ffffff;
+    font-size: 1.5rem;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.productos-list div button{
+    color: rgb(7, 4, 4);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+.productos-list div button:hover{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+.productos-list img{
+    max-width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    object-fit: contain;
+}
+.producto:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* SECCIÓN RESEÑAS  */
+
+#reseñas{
+    padding: 0px 20px;
+    text-align: left;
+}
+
+#reseñas h2{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.reseñas-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+/* TARJETAS DE RESEÑAS */
+
+.reseñas-list div{
+    background-color: #8fc5e4;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+    font-size: 1.1rem;
+    color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+}
+
+.reseñas-list div:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* SECCIÓN CONTACTO  */
+
+#contacto{
+    padding: 10px 30px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+#contacto h2{
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: 0;
+   
+}
+
+#contacto form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+#contacto form input[type="text"],
+#contacto form input[type="email"],
+#contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#contacto form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contacto form button {
+    color: rgb(7, 4, 4);
+    background-color: var(--option-color);
+    padding: 12px 25px;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+#contacto form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* PIE DE PÁGINA  */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 1rem;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE DESIGN  */
+
+@media (min-width: 600px){
+    nav ul{
+        font-size: 1.2rem;
+        flex-direction: row; 
+        justify-content: center; 
+    }
+    
+}
+@media (min-width: 992px){
+    nav ul{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
+
