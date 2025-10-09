@@ -249,6 +249,7 @@ nav a:hover{
 }
 
 #contacto h2{
+    text-align: center;
     font-size: 1.7rem;
     margin-bottom: 30px;
 }
@@ -351,4 +352,5 @@ footer {
         font-size: 1.2rem;
     }
 }
+
 
