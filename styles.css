@@ -42,7 +42,7 @@ header{
     background-size: cover;
     background-position: center center;
     background-color: var(--primary-color);
-    min-height: 100px; 
+    min-height: 125px; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -352,5 +352,6 @@ footer {
         font-size: 1.2rem;
     }
 }
+
 
 
