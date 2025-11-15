@@ -32,6 +32,10 @@ body{
     min-height: 100vh;
 }
 
+html, body { overflow-x: hidden; }
+
+nav{ width: 100%; box-sizing: border-box; }
+
 /* ENCABEZADO */
 header{
     color: var(--secondary-color);
@@ -62,8 +66,8 @@ nav ul{
     align-items: center;
 }
 
-
 nav ul{ flex-wrap: wrap; }
+
 
 nav a{
     color: var(--font-color);
@@ -81,6 +85,7 @@ nav a:hover{ background-color: var(--accent-color); color: var(--secondary-color
     top: 0;
     z-index: 1100;
 }
+.sticky-nav{ left: 0; width: 100%; }
 .sticky-nav ul{
     background-color: var(--color-nav);
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -103,6 +108,16 @@ nav a:hover{ background-color: var(--accent-color); color: var(--secondary-color
     text-align: center;
     padding: 30px;
     margin-top: 10px;
+    background: none;
+}
+
+.hero-img{
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
 }
 
 /* SECCIÓN SERVICIOS */
@@ -350,8 +365,6 @@ footer{
 .cart-item-info{ max-width: 160px; }
 .cart-summary{ margin-top: 12px; }
 .cart-actions{ display: flex; gap: 8px; margin-top: 8px; }
-
-/* Miniatura del item del carrito y stepper (+/-) */
 .cart-item-thumb { width:56px; height:56px; border-radius:6px; object-fit:cover; }
 .qty-span { min-width: 28px; text-align: center; display: inline-block; }
 .cart-item-controls button { padding: 4px 8px; }
@@ -369,7 +382,6 @@ footer{
     opacity: 0.95;
 }
 
-/* Destacar visualmente cuando un item del carrito cambia (cantidad o agregado) */
 .cart-item.item-changed{
     animation: cart-item-highlight 1s ease forwards;
 }
@@ -382,7 +394,7 @@ footer{
 
 .cart-items .empty{ padding: 16px; color: #666; }
 
-/* MEDIA QUERIES (agrupadas al final) */
+/* MEDIA QUERIES */
 @media (min-width: 600px){
     nav ul{ font-size: 1.2rem; flex-direction: row; justify-content: center; }
 }
@@ -405,10 +417,20 @@ footer{
 }
 
 @media (max-width: 576px) {
+    nav ul { flex-direction: column; align-items: stretch; font-size: 1rem; padding: 0 8px; box-sizing: border-box; }
+    nav a { padding: 10px 14px; }
+    nav ul > #contenedor-carrito { align-self: flex-end; margin-left: 0; padding: 8px 12px; }
+    header{
+        padding: 18px 12px;
+        min-height: 160px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
     .cart-panel { width: 100%; }
     .productos-list .col-sm-6, .productos-list .col-md-4, .productos-list .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
     #contacto { min-height: auto; padding: 16px; }
+    #inicio { min-height: auto; }
+    .hero-img { max-height: auto; }
 }
-
-
 
