@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto - Solmax</title>
+    <meta name="description" content="Contacto Solmax - escribinos para consultas sobre productos, servicios y reparaciones. Respuesta rápida y atención personalizada.">
+    <meta name="keywords" content="contacto, Solmax, consulta, servicios, productos">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Contacto - Solmax">
+    <meta property="og:description" content="Contactá a Solmax para consultas sobre productos y servicios tecnológicos." />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/solmax-logo.jpg">
+    <link rel="canonical" href="contacto.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +20,7 @@
 </head>
 
 <body>
+    
      <header>
         <h1></h1>
     </header>
@@ -19,32 +28,34 @@
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="./servicios.html">Servicios</a></li> <!---Chequear si puede abrirse y mostra multiples opciones-->
+            <li><a href="./servicios.html">Servicios</a></li> 
             <li><a href="./productos.html">Productos</a></li>
             <li><a href="index.html#reseñas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section id="contacto">
                 <h2>Ante cualquier consulta no dudes en contactarnos!</h2>
                 <form class="contact-form" action="https://formspree.io/f/xblanrpq" method="POST" autocomplete="on">
-                <input type="hidden" name="_next" value="https://samm2904.github.io/Solmax-Sc/">
-                    <label> Nombre:<input type="text" name="nombre" requiered></label>
+                    <label> Nombre:<input type="text" name="nombre" required></label>
                     <br>
-                    <label> Correo:<input type="email" name="correo" requiered></label>
+                    <label> Correo:<input type="email" name="correo" required></label>
                     <br>
-                    <label> Mensaje: <textarea name="mensaje" rows="4" cols="50"></textarea> 
-                    <input type="hidden" name="_redirect" value="">
+                    <label> Mensaje: <textarea name="mensaje" rows="4" cols="50" required></textarea> </label>
+                    <input type="hidden" name="_redirect" value="/contacto.html">
                     <button type="submit">Enviar</button>
                 </form>
             </section>
+            
     </main>
+
 
     <footer>
         <p>&copy; 2025 Solmax. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+    <script src="js/contacto.js"></script>
+</body>
 </html>
