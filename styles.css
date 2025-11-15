@@ -62,6 +62,9 @@ nav ul{
     align-items: center;
 }
 
+
+nav ul{ flex-wrap: wrap; }
+
 nav a{
     color: var(--font-color);
     text-decoration: none;
@@ -406,5 +409,6 @@ footer{
     .productos-list .col-sm-6, .productos-list .col-md-4, .productos-list .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
     #contacto { min-height: auto; padding: 16px; }
 }
+
 
 
